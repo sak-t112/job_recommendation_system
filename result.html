@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Results</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="main-container">
+        <h1>Top Matches for You</h1>
+        <div class="job-list">
+            {% if jobs %}
+                {% for job in jobs %}
+                <div class="job-card">
+                    <h3>{{ job.title }}</h3>
+                    <p><strong>Company:</strong> {{ job.company }}</p>
+                    <p><strong>Location:</strong> {{ job.location }}</p>
+                    <p>{{ job.description }}</p>
+                    <a href="{{ job.url }}" target="_blank">View Job</a>
+                </div>
+                {% endfor %}
+            {% else %}
+                <p>No jobs found. Try different keywords or filters.</p>
+            {% endif %}
+        </div>
+        <a href="/">← Try Again</a>
+    </div>
+</body>
+</html>
+
+
