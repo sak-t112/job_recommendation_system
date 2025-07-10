@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+}
+.main-container {
+    margin-top: 60px;
+}
+input[type="text"] {
+    width: 300px;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+}
+.filters {
+    margin: 15px 0;
+}
+.filters label {
+    margin-right: 10px;
+}
+button {
+    padding: 10px 25px;
+    background-color: #ff4b2b;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.job-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 10px;
+}
+a {
+    color: lightblue;
+    display: inline-block;
+    margin-top: 20px;
+}
