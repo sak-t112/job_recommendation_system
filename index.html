@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Finder</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="main-container">
+        <h1><i class="fa-solid fa-magnifying-glass"></i> Find Your <span>Dream Job</span></h1>
+        <form action="/recommend" method="POST">
+            <input type="text" name="skills" placeholder="Enter skills (e.g., Python, HTML)" required>
+            <div class="filters">
+                <label><input type="checkbox" name="filters" value="remote"> Remote</label>
+                <label><input type="checkbox" name="filters" value="fulltime"> Full-Time</label>
+                <label><input type="checkbox" name="filters" value="parttime"> Part-Time</label>
+                <label><input type="checkbox" name="filters" value="internship"> Internship</label>
+            </div>
+            <button type="submit">Get Recommendations</button>
+        </form>
+        <div id="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Loading jobs...</p>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
+
